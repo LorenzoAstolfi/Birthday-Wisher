@@ -8,7 +8,7 @@ import os
 
 #TODO: get Email and Password from external environment
 my_email = os.environ.get("MY_EMAIL")
-my_pw = os.envin.get("MY_PASSWORD")
+my_pw = og.environ.get("MY_PW")
 
 #TODO: 1. Update the birthdays.csv
 date_list = pd.read_csv("birthdays.csv")
