@@ -28,7 +28,7 @@ def check_birthday():
             birthdays.append(date)
     return birthdays
 
-today_birthdays = check_birthday()
+todays_birthdays = check_birthday()
 
 #TODO: 3. If step 2 is true, pick a random letter from letter templates and replace the [NAME] with the person's actual name from birthdays.csv
 if todays_birthdays:
