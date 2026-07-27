@@ -10,6 +10,12 @@ import os
 my_email = os.environ.get("MY_EMAIL")
 my_pw = os.environ.get("MY_PW")
 
+# Controllo preventivo: evita crash oscuri se le variabili sono vuote
+if not my_email or not my_pw:
+    raise ValueError(
+        "ERRORE: Credenziali vuote. Assicurati che MY_EMAIL e MY_PASSWORD siano configurati nei Secrets di GitHub."
+    )
+
 #TODO: 1. Update the birthdays.csv
 date_list = pd.read_csv("birthdays.csv")
 date_list = date_list.to_dict("records")
