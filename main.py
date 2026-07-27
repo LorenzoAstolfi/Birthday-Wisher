@@ -50,7 +50,7 @@ if todays_birthdays:
             connection.sendmail(
                 from_addr=my_email,
                 to_addrs=date_birthday["email"],
-                msg=f"Subject: Happy Birthday!\n\n{msg_email}",
+                msg=f"To: {date_birthday['email']}\nSubject: Happy Birthday!\n\n{msg_email}",
             )
             print(f"Email inviata con successo a {date_birthday['name']}!")
 else:
